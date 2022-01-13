@@ -223,3 +223,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wlan
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+#Dolby
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.audio_fx.current=dolby

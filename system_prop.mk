@@ -21,3 +21,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Voice assistant
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.opa.eligible_device=true
+
+#Dolby
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
