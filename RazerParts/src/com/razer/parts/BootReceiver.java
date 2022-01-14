@@ -37,6 +37,7 @@ public class BootReceiver extends BroadcastReceiver {
             return;
         }
 
+        SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
         String resolution = (String) spfu.get(context, SCREEN_RESOLUTION,
                 "1440");
 
