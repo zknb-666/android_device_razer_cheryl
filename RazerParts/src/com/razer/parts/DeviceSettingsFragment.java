@@ -46,7 +46,6 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     private ListPreference mRefreshRatePref;
 
     private Preference mDolbyAtmosPref;
-    private Preference mActiveWakeupPref;
 
     public String TAG = "RazerParts";
 
@@ -91,11 +90,6 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
                     .setClassName("com.dolby.daxappui",
                      "com.dolby.daxappui.MainActivity"));
                 break;
-            case ACTIVE_WAKE:
-                preference.getContext().startActivity(new Intent()
-                    .setClassName("org.lineageos.settings",
-                     "org.lineageos.settings.doze.DozeSettingsActivity"));
-                break;
         }
         return true;
     }
@@ -104,14 +98,12 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
         // mResolutionPref = findPreference(SCREEN_RESOLUTION);
         mRefreshRatePref = findPreference(SCREEN_REFRESH_RATE);
         mDolbyAtmosPref = findPreference(DOLBY_ATMOS);
-        mActiveWakeupPref = findPreference(ACTIVE_WAKE);
     }
 
     private void bindListeners() {
         // mResolutionPref.setOnPreferenceChangeListener(this);
         mRefreshRatePref.setOnPreferenceChangeListener(this);
         mDolbyAtmosPref.setOnPreferenceClickListener(this);
-        mActiveWakeupPref.setOnPreferenceClickListener(this);
     }
 
     private void updateSummary() {
