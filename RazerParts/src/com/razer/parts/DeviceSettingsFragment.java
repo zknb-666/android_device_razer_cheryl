@@ -39,14 +39,12 @@ import static com.razer.parts.Constants.*;
 import com.razer.parts.ShellUtils;
 import com.razer.parts.ShellUtils.CommandResult;
 import com.razer.parts.SharedPreferenceUtil;
-import com.razer.parts.ChromaManager;
 import com.razer.parts.R;
 
 public class DeviceSettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
     private ListPreference mResolutionPref;
     private ListPreference mRefreshRatePref;
 
-    private Preference mChromaPref;
     private Preference mDolbyAtmosPref;
     private Preference mActiveWakeupPref;
 
@@ -88,9 +86,6 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     @Override
     public boolean onPreferenceClick(Preference preference) {
         switch (preference.getKey()) {
-            case CHROMA:
-                preference.getContext().startActivity(new Intent(getActivity(), ChromaActivity.class));
-                break;
             case DOLBY_ATMOS:
                 preference.getContext().startActivity(new Intent()
                     .setClassName("com.dolby.daxappui",
@@ -108,7 +103,6 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     private void findPreferences() {
         // mResolutionPref = findPreference(SCREEN_RESOLUTION);
         mRefreshRatePref = findPreference(SCREEN_REFRESH_RATE);
-        mChromaPref = findPreference(CHROMA);
         mDolbyAtmosPref = findPreference(DOLBY_ATMOS);
         mActiveWakeupPref = findPreference(ACTIVE_WAKE);
     }
@@ -116,7 +110,6 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     private void bindListeners() {
         // mResolutionPref.setOnPreferenceChangeListener(this);
         mRefreshRatePref.setOnPreferenceChangeListener(this);
-        mChromaPref.setOnPreferenceClickListener(this);
         mDolbyAtmosPref.setOnPreferenceClickListener(this);
         mActiveWakeupPref.setOnPreferenceClickListener(this);
     }
