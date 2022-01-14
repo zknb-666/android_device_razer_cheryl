@@ -22,19 +22,9 @@
     <string name="pref_refresh_rate">Refresh Rate</string>
     <string name="pref_summary_place_holder"> </string>
 
-    <string name="category_chroma">Chroma MCU</string>
-    <string name="pref_chroma">Chroma</string>
-    <string name="pref_chroma_summary">Led configurator</string>
     <string name="category_others">Others</string>
     <string name="pref_dolby_atmos">Dolby Atmos™</string>
     <string name="pref_dolby_atmos_summary">Audio effects</string>
     <string name="pref_doze">Active wakeup</string>
     <string name="pref_doze_summary">Doze settings</string>
-
-    <string name="chroma_category_control">Control</string>
-    <string name="chroma_switch">Enabled</string>
-    <string name="chroma_category_custom">Custom</string>
-    <string name="chroma_mode">Mode</string>
-    <string name="chroma_color">Color</string>
-    <string name="chroma_brightness">Brightness (5-255)</string>
 </resources>

@@ -27,7 +27,6 @@ import static com.razer.parts.Constants.*;
 import com.razer.parts.ShellUtils;
 import com.razer.parts.ShellUtils.CommandResult;
 import com.razer.parts.SharedPreferenceUtil;
-import com.razer.parts.ChromaManager;
 import com.razer.parts.R;
 
 public class BootReceiver extends BroadcastReceiver {
@@ -38,17 +37,8 @@ public class BootReceiver extends BroadcastReceiver {
             return;
         }
 
-        SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
-        String mode = (String) spfu.get(context, CHROMA_MODE,
-                "color");
-        String color = (String) spfu.get(context, CHROMA_COLOR,
-                "#00FF00");
-        String brightness = (String) spfu.get(context, CHROMA_BRIGHTNESS,
-                "200");
         String resolution = (String) spfu.get(context, SCREEN_RESOLUTION,
                 "1440");
-        boolean chromaEnabled = (boolean) spfu.get(context, CHROMA_SWITCH,
-                false);
 
         if(resolution.equals("1440")) {
             ShellUtils.execCommand("wm density 480", false);
@@ -71,10 +61,5 @@ public class BootReceiver extends BroadcastReceiver {
         //     }
         // }
 
-        if(chromaEnabled) {
-            ChromaManager tempManager = new ChromaManager();
-            tempManager.systemReady();
-            tempManager.loadMcuWithParams(context);
-        }
     }
 }
