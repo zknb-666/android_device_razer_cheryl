@@ -21,6 +21,5 @@ public class Constants {
 
 
     public static final String DOLBY_ATMOS = "dolby_atmos";
-    public static final String ACTIVE_WAKE = "active_wakeup";
 
 }
