@@ -38,18 +38,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-            android:key="razer_parts_chroma"
-            android:title="@string/category_chroma">
-
-        <Preference
-            android:icon="@drawable/led_on"
-            android:key="chroma"
-            android:summary="@string/pref_chroma_summary"
-            android:title="@string/pref_chroma" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="razer_parts_others"
         android:title="@string/category_others">
 
