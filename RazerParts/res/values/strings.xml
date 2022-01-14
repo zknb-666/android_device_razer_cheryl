@@ -25,6 +25,4 @@
     <string name="category_others">Others</string>
     <string name="pref_dolby_atmos">Dolby Atmos™</string>
     <string name="pref_dolby_atmos_summary">Audio effects</string>
-    <string name="pref_doze">Active wakeup</string>
-    <string name="pref_doze_summary">Doze settings</string>
 </resources>

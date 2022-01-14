@@ -47,13 +47,6 @@
             android:summary="@string/pref_dolby_atmos_summary"
             android:title="@string/pref_dolby_atmos" />
 
-        <Preference
-            android:icon="@drawable/flash"
-            android:key="active_wakeup"
-            android:enabled="false"
-            android:summary="@string/pref_doze_summary"
-            android:title="@string/pref_doze" />
-
     </PreferenceCategory>
 
 </PreferenceScreen>
