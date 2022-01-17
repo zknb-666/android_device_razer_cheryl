@@ -111,7 +111,7 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
         updateRefreshRateSummary();
     }
 
-    private void updateResolutionSummary() {
+/*    private void updateResolutionSummary() {
         SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
         String resolution = (String) spfu.get(getContext(), SCREEN_RESOLUTION,
                 "1440");
@@ -123,7 +123,7 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
             }
         }
     }
-
+*/
     private void updateRefreshRateSummary() {
         SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
         String refreshRate = (String) spfu.get(getContext(), SCREEN_REFRESH_RATE,
