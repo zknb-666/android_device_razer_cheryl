@@ -60,16 +60,16 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     @Override
     public boolean onPreferenceChange(Preference preference, Object o) {
         switch (preference.getKey()) {
-            /*case SCREEN_RESOLUTION:
+            case SCREEN_RESOLUTION:
                 String resolution = (String) o;
                 if(o.equals("1440")) {
-                    ShellUtils.execCommand("wm density 411", false);
+                    ShellUtils.execCommand("wm density reset", false);
                     ShellUtils.execCommand("wm size 1440x2560", false);
                 } else {
-                    ShellUtils.execCommand("wm density 360", false);
+                    ShellUtils.execCommand("wm density 448", false);
                     ShellUtils.execCommand("wm size 1080x1920", false);
                 }
-                break;*/
+                break;
             case SCREEN_REFRESH_RATE:
                 int parseInt = Integer.parseInt((String) o);
                 Settings.System.putInt(getContext().getContentResolver(), MIN_REFRESH_RATE, parseInt);
@@ -95,23 +95,23 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     }
 
     private void findPreferences() {
-        // mResolutionPref = findPreference(SCREEN_RESOLUTION);
+        mResolutionPref = findPreference(SCREEN_RESOLUTION);
         mRefreshRatePref = findPreference(SCREEN_REFRESH_RATE);
         mDolbyAtmosPref = findPreference(DOLBY_ATMOS);
     }
 
     private void bindListeners() {
-        // mResolutionPref.setOnPreferenceChangeListener(this);
+        mResolutionPref.setOnPreferenceChangeListener(this);
         mRefreshRatePref.setOnPreferenceChangeListener(this);
         mDolbyAtmosPref.setOnPreferenceClickListener(this);
     }
 
     private void updateSummary() {
-        // updateResolutionSummary();
+        updateResolutionSummary();
         updateRefreshRateSummary();
     }
 
-/*    private void updateResolutionSummary() {
+    private void updateResolutionSummary() {
         SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
         String resolution = (String) spfu.get(getContext(), SCREEN_RESOLUTION,
                 "1440");
@@ -123,7 +123,7 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
             }
         }
     }
-*/
+
     private void updateRefreshRateSummary() {
         SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
         String refreshRate = (String) spfu.get(getContext(), SCREEN_REFRESH_RATE,
