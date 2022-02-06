@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--string-array name="resolution_entries">
-        <item>1080p</item>
-        <item>1440p</item>
+    <string-array name="resolution_entries">
+        <item>1080P</item>
+        <item>1440P</item>
     </string-array>
     <string-array name="resolution_values">
         <item>1080</item>
         <item>1440</item>
-    </string-array-->
+    </string-array>
     <string-array name="refresh_rate_entries">
         <!--item>30Hz</item>
         <item>48Hz</item>
