@@ -41,11 +41,11 @@ public class BootReceiver extends BroadcastReceiver {
         String resolution = (String) spfu.get(context, SCREEN_RESOLUTION,
                 "1440");
 
-       /* if(resolution.equals("1440")) {
-            ShellUtils.execCommand("wm density 411, false);
+        if(resolution.equals("1440")) {
+            ShellUtils.execCommand("wm density reset", false);
             ShellUtils.execCommand("wm size 1440x2560", false);
         } else {
-            ShellUtils.execCommand("wm density 360", false);
+            ShellUtils.execCommand("wm density 448", false);
             ShellUtils.execCommand("wm size 1080x1920", false);
         }
 
