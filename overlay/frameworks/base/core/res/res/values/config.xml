@@ -956,4 +956,18 @@
     <!-- True if the device has a kernel high refresh rate only screen, then use Api in IWindowManager -->
     <bool name="config_useLegacyRefreshRateControl">true</bool>
     
+
+    <!-- An array of arrays of side fingerprint sensor properties relative to each display.
+         Note: this value is temporary and is expected to be queried directly
+         from the HAL in the future. -->
+    <array name="config_sfps_sensor_props" translatable="false">
+        <item>@array/config_sfps_sensor_props_0</item>
+    </array>
+
+    <array name="config_sfps_sensor_props_0" translatable="false">
+        <item>local:0</item>
+        <item>1450</item>
+        <item>1150</item>
+        <item>115</item>
+    </array>
 </resources>
