@@ -195,6 +195,13 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl
 
+# Dolby 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
+    $(LOCAL_PATH)/configs/audio/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
+    $(LOCAL_PATH)/configs/audio/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor.xml \
+    $(LOCAL_PATH)/configs/audio/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
+
 # Doze
 PRODUCT_PACKAGES += \
     CherylDoze
@@ -370,6 +377,10 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.sh \
     init.rcl.smartamp_init.sh
+
+# RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 # RIL
 PRODUCT_PACKAGES += \
