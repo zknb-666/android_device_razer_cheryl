@@ -21,3 +21,5 @@ persist.pressure.diff             u:object_r:vendor_default_prop:s0
 ro.build.software.version         u:object_r:vendor_default_prop:s0
 ro.product.nickname               u:object_r:vendor_default_prop:s0
 sdm.                              u:object_r:vendor_default_prop:s0
+# Dolby
+persist.vendor.dolby.loglevel                                                        u:object_r:vendor_dolby_loglevel_prop:s0
