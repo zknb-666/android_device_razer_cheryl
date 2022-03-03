@@ -435,6 +435,8 @@ vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib64/libwvhidl.so
 
 # Dolby
+system/etc/sysconfig/config-com.dolby.daxappui.xml
+system/etc/sysconfig/config-com.dolby.daxservice.xml
 system/etc/permissions/com.dolby.daxservice.xml
 system/etc/permissions/com.dolby.daxappui.xml
 vendor/etc/dolby/dax-default.xml
@@ -454,7 +456,6 @@ vendor/lib/libdapparamstorage.so
 vendor/lib64/libdapparamstorage.so
 vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
 vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc
-vendor/lib/libstagefright_soft_qtiflacdec.so
 vendor/lib/libstagefright_soft_ddpdec.so
 
 
