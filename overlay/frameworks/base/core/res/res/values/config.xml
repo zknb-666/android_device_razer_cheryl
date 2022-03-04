@@ -956,10 +956,15 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
+
     <!-- The default refresh rate. Razer Phone manages this using the peak refresh rate setting, so set
          this value to 0 so it has no effect. -->
     <integer name="config_defaultRefreshRate">0</integer>
 
     <!-- The default peak refresh rate. -->
     <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- True if the device has a kernel high refresh rate only screen, then use Api in IWindowManager -->
+    <bool name="config_useLegacyRefreshRateControl">true</bool>
+    
 </resources>
