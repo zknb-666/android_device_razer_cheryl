@@ -42,7 +42,6 @@ import com.razer.parts.SharedPreferenceUtil;
 import com.razer.parts.R;
 
 public class DeviceSettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
-    private ListPreference mResolutionPref;
     private ListPreference mRefreshRatePref;
 
     private Preference mDolbyAtmosPref;
@@ -60,16 +59,6 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     @Override
     public boolean onPreferenceChange(Preference preference, Object o) {
         switch (preference.getKey()) {
-            case SCREEN_RESOLUTION:
-                String resolution = (String) o;
-                if(o.equals("1440")) {
-                    ShellUtils.execCommand("wm density reset", false);
-                    ShellUtils.execCommand("wm size 1440x2560", false);
-                } else {
-                    ShellUtils.execCommand("wm density 448", false);
-                    ShellUtils.execCommand("wm size 1080x1920", false);
-                }
-                break;
             case SCREEN_REFRESH_RATE:
                 int parseInt = Integer.parseInt((String) o);
                 Settings.System.putInt(getContext().getContentResolver(), MIN_REFRESH_RATE, parseInt);
@@ -95,33 +84,17 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     }
 
     private void findPreferences() {
-        mResolutionPref = findPreference(SCREEN_RESOLUTION);
         mRefreshRatePref = findPreference(SCREEN_REFRESH_RATE);
         mDolbyAtmosPref = findPreference(DOLBY_ATMOS);
     }
 
     private void bindListeners() {
-        mResolutionPref.setOnPreferenceChangeListener(this);
         mRefreshRatePref.setOnPreferenceChangeListener(this);
         mDolbyAtmosPref.setOnPreferenceClickListener(this);
     }
 
     private void updateSummary() {
-        updateResolutionSummary();
         updateRefreshRateSummary();
-    }
-
-    private void updateResolutionSummary() {
-        SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
-        String resolution = (String) spfu.get(getContext(), SCREEN_RESOLUTION,
-                "1440");
-        String[] entryvalue = getContext().getResources().getStringArray(R.array.resolution_values);
-        String[] entry = getContext().getResources().getStringArray(R.array.resolution_entries);
-        for (int i = 0; i < entryvalue.length; i++) {
-            if (entryvalue[i].equals(resolution)) {
-                mResolutionPref.setSummary(entry[i]);
-            }
-        }
     }
 
     private void updateRefreshRateSummary() {

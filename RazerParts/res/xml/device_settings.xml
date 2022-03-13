@@ -18,15 +18,6 @@
             android:title="@string/category_display">
 
         <ListPreference
-            android:defaultValue="1440"
-            android:icon="@drawable/overscan"
-            android:key="screen_resolution"
-            android:entries="@array/resolution_entries"
-            android:entryValues="@array/resolution_values"
-            android:summary="@string/pref_summary_place_holder"
-            android:title="@string/pref_resolution" />
-
-        <ListPreference
             android:defaultValue="120"
             android:icon="@drawable/cellphone_screenshot"
             android:key="screen_refresh_rate"

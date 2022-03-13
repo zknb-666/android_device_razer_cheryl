@@ -16,7 +16,6 @@ package com.razer.parts;
 
 public class Constants {
 
-    public static final String SCREEN_RESOLUTION = "screen_resolution";
     public static final String SCREEN_REFRESH_RATE = "screen_refresh_rate";
 
 
