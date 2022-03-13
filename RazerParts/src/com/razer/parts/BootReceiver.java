@@ -40,16 +40,7 @@ public class BootReceiver extends BroadcastReceiver {
         }
 
         SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
-        String resolution = (String) spfu.get(context, SCREEN_RESOLUTION,
-                "1440");
 
-        if(resolution.equals("1440")) {
-            ShellUtils.execCommand("wm density reset", false);
-            ShellUtils.execCommand("wm size 1440x2560", false);
-        } else {
-            ShellUtils.execCommand("wm density 448", false);
-            ShellUtils.execCommand("wm size 1080x1920", false);
-        }
         int refreshRate = Settings.System.getInt(context.getContentResolver(), PEAK_REFRESH_RATE, 120);
         Settings.System.putInt(context.getContentResolver(), MIN_REFRESH_RATE, refreshRate);
 	    Settings.System.putInt(context.getContentResolver(), PEAK_REFRESH_RATE, refreshRate);
