@@ -11,4 +11,6 @@
     <string name="category_others">其他</string>
     <string name="pref_dolby_atmos">Dolby Atmos™</string>
     <string name="pref_dolby_atmos_summary">音效设置</string>
+    <string name="pref_doze">主动显示</string>
+    <string name="pref_doze_summary">休眠设置</string>
 </resources>

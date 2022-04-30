@@ -17,29 +17,22 @@ package com.razer.parts;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.SystemProperties;
-import android.os.RemoteException;
 import android.provider.Settings;
-import android.view.IWindowManager;
-import android.view.WindowManagerGlobal;
+
 import static android.provider.Settings.System.MIN_REFRESH_RATE;
 import static android.provider.Settings.System.PEAK_REFRESH_RATE;
 
-import static com.razer.parts.Constants.*;
-import com.razer.parts.ShellUtils;
-import com.razer.parts.ShellUtils.CommandResult;
-import com.razer.parts.SharedPreferenceUtil;
-import com.razer.parts.R;
-
 public class BootReceiver extends BroadcastReceiver {
 
+    @SuppressWarnings("ConstantConditions")
     @Override
     public void onReceive(Context context, Intent intent) {
         if (context == null) {
             return;
         }
 
-        SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
+        SharedPreferenceUtil sharedPreferenceUtil = SharedPreferenceUtil.getInstance();
+        context.startService(new Intent(context, HolderService.class));
 
         int refreshRate = Settings.System.getInt(context.getContentResolver(), PEAK_REFRESH_RATE, 120);
         Settings.System.putInt(context.getContentResolver(), MIN_REFRESH_RATE, refreshRate);
