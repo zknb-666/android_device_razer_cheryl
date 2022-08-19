@@ -28,5 +28,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 #Dolby
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.enabled=false \
 vendor.audio.dolby.ds2.hardbypass=false
