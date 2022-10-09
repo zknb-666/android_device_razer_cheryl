@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2017-2019,2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -369,8 +369,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sh \
-    init.rcl.smartamp_init.sh
+    init.qcom.sh
 
 # RemovePackages
 PRODUCT_PACKAGES += \
@@ -408,6 +407,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
+
+# TFA calibration
+PRODUCT_PACKAGES += \
+    tfa-calib
 
 # Update engine
 PRODUCT_PACKAGES += \
