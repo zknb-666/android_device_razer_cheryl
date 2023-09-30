@@ -6,7 +6,9 @@
 
 android_app {
     name: "RazerParts",
-
+    defaults: [
+        "SettingsLibDefaults",
+    ],
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
     certificate: "platform",
@@ -14,7 +16,6 @@ android_app {
     privileged: true,
 
     static_libs: [
-        "org.lineageos.settings.resources",
         "androidx.cardview_cardview",
         "androidx.preference_preference",
         "androidx.appcompat_appcompat",
