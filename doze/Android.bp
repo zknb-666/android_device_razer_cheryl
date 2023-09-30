@@ -6,7 +6,9 @@
 
 android_app {
     name: "CherylDoze",
-
+    defaults: [
+        "SettingsLibDefaults",
+    ],
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
     certificate: "platform",
@@ -14,7 +16,8 @@ android_app {
     privileged: true,
 
     static_libs: [
-        "org.lineageos.settings.resources",
+        "androidx.core_core",
+        "androidx.preference_preference",
     ],
 
     optimize: {
