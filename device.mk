@@ -214,10 +214,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.1.vendor
-
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    RazerParts 
     
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
