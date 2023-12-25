@@ -202,6 +202,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor.xml \
     $(LOCAL_PATH)/configs/dolby/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
 
+PRODUCT_PACKAGES += \
+    RazerDolby
+
 # Doze
 PRODUCT_PACKAGES += \
     CherylDoze
