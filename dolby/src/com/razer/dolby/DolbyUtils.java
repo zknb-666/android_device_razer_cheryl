@@ -121,32 +121,10 @@ public final class DolbyUtils {
         return enabled;
     }
 
-    public void setDialogueEnhancerAmount(int amount) {
-        checkEffect();
-        Log.d(TAG, "setDialogueEnhancerAmount: " + amount);
-        mDolbyAtmos.setDapParameterBool(DsParam.DIALOGUE_ENHANCER_ENABLE, amount > 0);
-        mDolbyAtmos.setDapParameterInt(DsParam.DIALOGUE_ENHANCER_AMOUNT, amount);
-    }
-
-    public int getDialogueEnhancerAmount() {
-        boolean enabled = mDolbyAtmos.getDapParameterBool(DsParam.DIALOGUE_ENHANCER_ENABLE);
-        int amount = enabled ? mDolbyAtmos.getDapParameterInt(DsParam.DIALOGUE_ENHANCER_AMOUNT) : 0;
-        Log.d(TAG, "getDialogueEnhancerAmount: enabled=" + enabled + " amount=" + amount);
-        return amount;
-    }
-
     public void setStereoWideningAmount(int amount) {
         checkEffect();
         Log.d(TAG, "setStereoWideningAmount: " + amount);
-        mDolbyAtmos.setDapParameterBool(DsParam.HEADPHONE_VIRTUALIZER, amount > 0);
         mDolbyAtmos.setDapParameterInt(DsParam.STEREO_WIDENING, amount);
-    }
-
-    public int getStereoWideningAmount() {
-        boolean enabled = mDolbyAtmos.getDapParameterBool(DsParam.HEADPHONE_VIRTUALIZER);
-        int amount = enabled ? mDolbyAtmos.getDapParameterInt(DsParam.STEREO_WIDENING) : 0;
-        Log.d(TAG, "getStereoWideningAmount: enabled=" + enabled + " amount=" + amount);
-        return amount;
     }
 
     public void setVolumeLevelerEnabled(boolean enable) {
