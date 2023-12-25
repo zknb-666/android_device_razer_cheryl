@@ -41,19 +41,6 @@
             android:entryValues="@array/dolby_preset_values"
             android:title="@string/dolby_preset" />
 
-        <ListPreference
-            android:key="dolby_virtualizer"
-            android:entries="@array/dolby_virtualizer_entries"
-            android:entryValues="@array/dolby_virtualizer_values"
-            android:defaultValue="0"
-            android:title="@string/dolby_virtualizer" />
-
-        <ListPreference
-            android:key="dolby_dialogue"
-            android:entries="@array/dolby_dialogue_entries"
-            android:entryValues="@array/dolby_dialogue_values"
-            android:title="@string/dolby_dialogue_enhancer" />
-
         <SwitchPreference
             android:key="dolby_bass"
             android:title="@string/dolby_bass_enhancer" />

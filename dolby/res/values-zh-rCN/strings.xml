@@ -33,8 +33,6 @@
     <string name="dolby_on_with_profile">(%1$s)</string>
     <string name="dolby_category_settings">设置</string>
     <string name="dolby_bass_enhancer">低音增强器</string>
-    <string name="dolby_dialogue_enhancer">对话增强器</string>
-    <string name="dolby_virtualizer">环绕声虚拟器</string>
     <string name="dolby_volume_leveler">音量增强</string>
     <string name="dolby_connect_headphones">连接耳机</string>
     <string name="dolby_reset_profile">重置为默认值</string>
