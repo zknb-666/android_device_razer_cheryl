@@ -429,31 +429,6 @@ vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib64/libwvhidl.so
 
-# Dolby
-system/etc/sysconfig/config-com.dolby.daxappui.xml
-system/etc/sysconfig/config-com.dolby.daxservice.xml
-system/etc/permissions/com.dolby.daxservice.xml
-system/etc/permissions/com.dolby.daxappui.xml
-vendor/etc/dolby/dax-default.xml
--system/priv-app/daxService/daxService.apk
--system/app/DaxUI/DaxUI.apk
-vendor/etc/media_codecs_dolby_audio.xml
-vendor/lib64/vendor.dolby.hardware.dms@1.0.so
-vendor/lib/vendor.dolby.hardware.dms@1.0.so
-vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so
-vendor/lib/libstagefrightdolby.so
-vendor/lib64/libstagefrightdolby.so
-vendor/lib/soundfx/libswdap.so
-vendor/lib64/libdapparamstorage.so
-vendor/lib64/libdlbdsservice.so
-vendor/lib64/soundfx/libswdap.so
-vendor/lib/libdapparamstorage.so
-vendor/lib64/libdapparamstorage.so
-vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
-vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc
-vendor/lib/libstagefright_soft_ddpdec.so
-
-
 # Fingerprint
 vendor/firmware/fpctzappfingerprint.b00
 vendor/firmware/fpctzappfingerprint.b01
